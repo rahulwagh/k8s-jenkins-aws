@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jhooq-springboot
+  name: messayed-springboot
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: jhooq-springboot
+      app: mesayed-springboot
   template:
     metadata:
       labels:
-        app: jhooq-springboot
+        app: messayed-springboot
     spec:
       containers:
         - name: springboot
-          image: rahulwagh17/jhooq-docker-demo:jhooq-docker-demo
+          image: messayed/messayed-devops-capstone:messayed-devops-capstone
           ports:
             - containerPort: 8080
           env:
@@ -24,11 +24,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: jhooq-springboot
+  name: messayed-springboot
 spec:
   type: LoadBalancer
   ports:
     - port: 80
       targetPort: 8080
   selector:
-    app: jhooq-springboot
+    app: messayed-springboot
