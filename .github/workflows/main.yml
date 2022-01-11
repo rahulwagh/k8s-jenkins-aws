@@ -35,4 +35,25 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
+          - name: semgrep-action
+  # You may pin to the exact commit or the version.
+  # uses: returntocorp/semgrep-action@04a58edffdf447a3b4bd8e299de4ac446112c3ca
+  uses: returntocorp/semgrep-action@v1
+  with:
+    # Rules and patterns to search for with semgrep.
+
+    config: # optional
+    # Access token to post results to the semgrep app.
+
+    publishToken: # optional
+    # Set to 1 if you want a semgrep.sarif file to be written with all semgrep findings.
+
+    generateSarif: # optional
+    # GitHub Actions events where the action should always report success,
+even if findings were found.
+`auditOn: push` will scan for findings but not fail on push events.
+You can set multiple event names with a space-separated string.
+
+    auditOn: # optional
+          
   
