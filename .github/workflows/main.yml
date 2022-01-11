@@ -51,7 +51,7 @@ jobs:
     generateSarif: # optional
     # GitHub Actions events where the action should always report success,
 even if findings were found.
-`auditOn: 
+`auditOn:  semgrep --config=auto $(pwd)
 
     auditOn: # optional
           
