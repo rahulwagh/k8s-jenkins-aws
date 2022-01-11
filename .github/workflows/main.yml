@@ -51,8 +51,7 @@ jobs:
     generateSarif: # optional
     # GitHub Actions events where the action should always report success,
 even if findings were found.
-`auditOn: push` will scan for findings but not fail on push events.
-You can set multiple event names with a space-separated string.
+`auditOn: 
 
     auditOn: # optional
           
