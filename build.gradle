@@ -2,7 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.2.7.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
-}
+} 
 
 group = 'com.jhooq'
 version = '0.0.1-SNAPSHOT'
